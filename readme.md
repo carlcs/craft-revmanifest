@@ -1,6 +1,6 @@
 # Rev Manifest plugin for Craft
 
-A Craft plugin to look up an asset's filename in an asset revisioning manifest like the one [gulp-rev][1] outputs.
+A Craft plugin to look up a static asset's filename in an asset revisioning manifest like the one [gulp-rev][1] outputs.
 
 ## Installation
 
@@ -12,15 +12,16 @@ To install the plugin, copy the revmanifest/ folder into craft/plugins/. Then go
 
 Looks up an asset path in the manifest and returns the asset revision's URL.
 
-If the asset path is not present in the manifest it will return the URL for the original asset.
-
-The asset revision's path will be appended to your Site URL. Set the Site URL in Craft's [config settings][2] and Craft doesn't have to fetch it from the database.
-
 ```twig
 {{ revUrl('assets/stylesheets/app.css') }}
 
 {# outputs assets/stylesheets/app-a930f9af02.css #}
 ```
+
+If the asset path is not present in the manifest it will return the URL for the original asset.
+
+The asset revision's path will be appended to your Site URL. Set the Site URL in Craft's [config settings][2] and Craft doesn't have to fetch it from the database.
+
 
 #### Parameters
 
@@ -29,13 +30,11 @@ The asset revision's path will be appended to your Site URL. Set the Site URL in
 
 ## Settings
 
-You can set the path to your manifest file in Craft's [config settings][2].
+You can set the path to your manifest file in Craft's [config settings][2]. Without configuration, the plugins expects the manifest file in assets/rev-manifest.json.
 
 ```php
 'revManifestPath' => 'rev-manifest.json'
 ```
-
-Without configuration, the plugins expects the manifest file in assets/rev-manifest.json.
 
 
   [1]: https://github.com/sindresorhus/gulp-rev
