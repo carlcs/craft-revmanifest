@@ -48,7 +48,9 @@ class RevManifestService extends BaseApplicationComponent
 	 */
         public function getManifest()
         {
-                if (!$this->_manifest)
+                $status = craft()->config->get('revManifest');
+
+                if (!$this->_manifest && $status !== false)
                 {
                         $manifestPath = craft()->config->get('revManifestPath');
 
@@ -64,7 +66,7 @@ class RevManifestService extends BaseApplicationComponent
                                 return null;
                         }
 
-                        $manifest = json_decode(file_get_contents($manifestPath), TRUE);
+                        $manifest = json_decode(file_get_contents($manifestPath), true);
 
                         if (!$manifest)
                         {

@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.0.1",
+    "downloadUrl": "https://github.com/carlcs/craft-revmanifest/archive/v1.0.1.zip",
+    "date": "2015-12-16T01:00:00-01:00",
+    "notes": [
+      "[Added] Added revManifest config setting to deactivate revisioning."
+    ]
+  },
+  {
     "version": "1.0",
     "downloadUrl": "https://github.com/carlcs/craft-revmanifest/archive/v1.0.zip",
     "date": "2015-12-08T15:00:00-01:00",
