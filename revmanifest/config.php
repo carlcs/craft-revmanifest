@@ -1,5 +1,5 @@
 <?php
 
 return array(
-        'revManifestPath' => 'assets/rev-manifest.json'
+    'revManifestPath' => 'assets/rev-manifest.json'
 );
