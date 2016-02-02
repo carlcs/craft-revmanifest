@@ -1,4 +1,4 @@
-# Rev Manifest plugin for Craft
+# Rev Manifest plugin for Craft CMS
 
 A Craft plugin to look up a static asset's filename in an asset revisioning manifest like the one [gulp-rev][1] outputs.
 
